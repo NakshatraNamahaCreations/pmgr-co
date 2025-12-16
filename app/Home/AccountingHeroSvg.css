@@ -1,0 +1,175 @@
+.hero-svg-wrapper {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.hero-svg {
+  width: 500px;
+  height: auto;
+}
+
+/* Colors */
+.bg-card {
+  fill: #ffffff;
+  stroke: #e5ecff;
+  stroke-width: 1;
+  filter: drop-shadow(0 14px 40px rgba(15, 23, 42, 0.12));
+}
+
+.top-bar {
+  fill: #f3f4ff;
+}
+
+.dot {
+  fill: #e5e7eb;
+}
+.dot-red {
+  fill: #f97373;
+}
+.dot-yellow {
+  fill: #facc15;
+}
+.dot-green {
+  fill: #22c55e;
+}
+
+.screen {
+  fill: #f7f9ff;
+}
+
+/* Bars */
+.bar {
+  fill: #2563eb;
+  opacity: 0.9;
+}
+.bar-2 {
+  animation: barPulse 2.2s ease-in-out infinite;
+}
+.bar-3 {
+  animation: barPulse 2.2s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+.bar-4 {
+  animation: barPulse 2.2s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+/* Pie chart */
+.pie-bg {
+  fill: #e0ecff;
+}
+.pie-slice {
+  fill: #2563eb;
+  animation: rotateSlice 5s linear infinite;
+  transform-origin: 290px 130px;
+}
+.pie-center {
+  fill: #ffffff;
+}
+
+/* Ledger */
+.ledger-bg {
+  fill: #ffffff;
+  stroke: #e5ecff;
+  stroke-width: 1;
+}
+.ledger-line {
+  stroke: #cbd5f5;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* Coins */
+.coins circle {
+  fill: #facc15;
+}
+.coin-text {
+  font-size: 10px;
+  font-weight: 700;
+  fill: #92400e;
+}
+.coin-1 {
+  animation: coinBounce 1.8s ease-in-out infinite;
+}
+.coin-2 {
+  animation: coinBounce 2s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+/* Tick badge */
+.tick-bg {
+  fill: #22c55e;
+}
+.tick-mark {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.tick-badge {
+  animation: floatBadge 3.5s ease-in-out infinite;
+}
+
+/* Global gentle float */
+.chart-bars,
+.pie-chart,
+.ledger {
+  animation: floatGroup 6s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes floatGroup {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes barPulse {
+  0% {
+    transform: scaleY(0.9) translateY(4px);
+    transform-origin: center bottom;
+  }
+  50% {
+    transform: scaleY(1.05) translateY(-3px);
+  }
+  100% {
+    transform: scaleY(0.9) translateY(4px);
+  }
+}
+
+@keyframes coinBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-6px);
+  }
+  60% {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes rotateSlice {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatBadge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}

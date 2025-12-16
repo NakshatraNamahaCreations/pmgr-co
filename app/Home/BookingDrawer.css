@@ -1,0 +1,104 @@
+/* Overlay */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.drawer-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Drawer Panel */
+.drawer-panel {
+  position: absolute;
+  right: -420px;
+  top: 0;
+  width: 380px;
+  height: 100%;
+  background: #ffffff;
+  padding: 24px 20px;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  transition: right 0.36s ease;
+}
+
+.drawer-panel.open {
+  right: 0;
+}
+
+/* Close btn */
+.drawer-close {
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #475569;
+  position: absolute;
+  top: 12px;
+  right: 18px;
+}
+
+/* Title */
+.drawer-title {
+  margin: 10px 0 4px;
+  font-size: 1.6rem;
+  color: #0f172a;
+}
+
+.drawer-desc {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+/* Form fields */
+.drawer-field {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-field label {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+
+.drawer-field input,
+.drawer-field textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d7dce3;
+  outline: none;
+  font-size: 0.9rem;
+  background: #f8fafc;
+}
+
+.drawer-field textarea {
+  height: 90px;
+  resize: none;
+}
+
+/* Submit button */
+.drawer-submit {
+  width: 100%;
+  padding: 11px;
+  background: #1d4ed8;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.drawer-submit:hover {
+  background: #1e40af;
+}

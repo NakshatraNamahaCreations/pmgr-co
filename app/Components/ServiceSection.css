@@ -1,0 +1,137 @@
+.svc-section {
+  background: #f3f5ff;
+  padding: 80px 20px;
+}
+
+.svc-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.svc-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.svc-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.svc-subtitle {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4b5563;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Grid of cards */
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Card */
+.svc-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px 16px 18px;
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.06);
+  border-top: 4px solid #2563eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: default;
+}
+
+.svc-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Category pill */
+.svc-card__pill {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Index on right */
+.svc-card__index {
+  font-size: 11px;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.svc-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.svc-card__desc {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* Hover state: flip to blue */
+.svc-card:hover {
+  background: #2563eb;
+  border-color: #0f3ea8;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 28px rgba(15, 23, 42, 0.18);
+}
+
+.svc-card:hover .svc-card__pill {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.svc-card:hover .svc-card__index,
+.svc-card:hover .svc-card__title,
+.svc-card:hover .svc-card__desc {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .svc-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .svc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .svc-title {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 520px) {
+  .svc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-section {
+    padding: 60px 16px;
+  }
+}

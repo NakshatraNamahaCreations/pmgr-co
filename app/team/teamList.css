@@ -1,0 +1,112 @@
+.biography-section {
+  background: #ffffff;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.biography-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.biography-container h2{
+    color: #175885;
+    font-weight: 600;
+}
+
+.biography-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 50px;
+}
+
+/* Columns */
+.bio-column {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+/* Headings */
+.bio-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+/* Paragraphs */
+.bio-column p {
+  margin-bottom: 18px;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  width: 100%;
+  background-color: #175885; 
+  margin: 24px 0;
+}
+
+/* Career list */
+.bio-list {
+  margin: 0 0 32px;
+  padding-left: 18px;
+}
+
+.bio-list li {
+  margin-bottom: 12px;
+  color: #334155;
+}
+
+.bio-list strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.corner-title {
+  position: relative;
+  display: inline-block;
+  padding: 12px 20px;
+  color: #222;
+}
+
+/* TOP LEFT & TOP RIGHT */
+.corner-title::before,
+.corner-title::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-color: #175885; 
+}
+
+/* TOP LEFT */
+.corner-title::before {
+  top: 0;
+  left: 0;
+  border-top: 3px solid #175885;
+  border-left: 3px solid #175885;
+}
+
+/* BOTTOM RIGHT */
+.corner-title::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid #175885;
+  border-right: 3px solid #175885;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .biography-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .bio-heading {
+    font-size: 1.4rem;
+  }
+}

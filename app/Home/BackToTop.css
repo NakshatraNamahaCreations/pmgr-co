@@ -1,0 +1,25 @@
+.scrollTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #175887; /* Your gold color */
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.scrollTopBtn:hover {
+  background: #175887;
+  transform: translateY(-4px);
+}
+
+.scrollTopBtn:active {
+  transform: scale(0.92);
+}

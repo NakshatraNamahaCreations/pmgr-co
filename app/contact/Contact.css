@@ -1,0 +1,365 @@
+/* ===============================
+   CONTACT PAGE LAYOUT
+================================ */
+
+.contact-page {
+  background: #f8fafc;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   HEADINGS & TEXT
+================================ */
+
+.contact-heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.contact-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===============================
+   GRID
+================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* ===============================
+   CONTACT INFO
+================================ */
+
+.contact-info {
+  background: #f9fbff;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #e5ecf5;
+}
+
+.contact-info h2 {
+  font-size: 1.4rem;
+  color: #175887;
+  font-weight: 600;
+}
+
+.contact-info h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.contact-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.contact-info a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   CONTACT FORM
+================================ */
+
+.contact-form-wrapper {
+  background: #ffffff;
+  padding: 36px;
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(7, 30, 73, 0.08);
+  border: 1px solid #e6edf5;
+}
+
+.ca-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.ca-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ca-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.ca-form-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.ca-form-field input,
+.ca-form-field select,
+.ca-form-field textarea {
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  border: 1px solid #dfe7f1;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.ca-form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.ca-form-field input:focus,
+.ca-form-field select:focus,
+.ca-form-field textarea:focus {
+  border-color: #175887;
+  box-shadow: 0 0 0 3px rgba(23, 88, 135, 0.15);
+}
+
+/* Submit Button */
+.ca-submit-btn {
+  padding: 14px 26px;
+  background: linear-gradient(135deg, #175887, #0d4c7d);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  align-self: flex-start;
+}
+
+.ca-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(23, 88, 135, 0.35);
+}
+
+.ca-form-note {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 420px;
+}
+
+/* ===============================
+   LOCATION CARDS
+================================ */
+
+.solutions-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.solutions-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 26px;
+  border: 1px solid #e6ebf5;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+/* LEFT ACCENT BAR */
+.solutions-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #147ceb, #175887);
+}
+
+/* TOP RIGHT DECORATIVE SHAPE */
+.solutions-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 0 0 0 120px;
+  background: radial-gradient(circle at 20% 20%, #0073ff, #08519e);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.solutions-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(8, 37, 84, 0.14);
+}
+
+.solutions-card:hover::before {
+  opacity: 0.3;
+}
+
+/* Card Header */
+.solutions-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.solutions-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 115, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solutions-react-icon {
+  font-size: 22px;
+  color: #0073ff;
+}
+
+.solutions-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* Card Details */
+.solutions-details {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.solutions-details p {
+  margin: 0 0 6px;
+}
+
+.solutions-details .label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.map-link {
+  display: inline-block;
+  margin: 6px 0 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #0073ff;
+  text-decoration: none;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.branches-section {
+  margin-top: 80px;
+}
+
+.branches-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 40px;
+}
+
+.contact-link {
+  color: #111;
+  font-weight: 500;
+  text-decoration: none;
+  text-decoration-thickness: 2px;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+  .ca-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ca-submit-btn {
+    width: 100%;
+  }
+
+  .solutions-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-cards {
+    grid-template-columns: 1fr;
+    margin: 40px 16px;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+  }
+
+  .contact-page {
+    padding: 40px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 1.75rem;
+  }
+
+  .contact-intro {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,301 @@
+:root {
+  --pf-blue: #0b5ed7;
+  --pf-blue-soft: #e5efff;
+  --pf-dark: #0f172a;
+  --pf-muted: #6b7280;
+  --pf-border-subtle: #e5e7eb;
+}
+
+/* Section wrapper */
+.pf-section {
+  padding: 0px 24px 90px;
+ /* background:
+    radial-gradient(circle at top left, #e0ebff 0, transparent 55%),
+    radial-gradient(circle at bottom right, #eaf5ff 0, transparent 50%),
+    #f5f7fb;*/
+    background-color: #fff;
+}
+
+/* Inner card */
+.pf-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 28px 46px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft gradient glow behind */
+.pf-inner::before {
+  content: "";
+  position: absolute;
+  inset: -80px;
+  background: radial-gradient(circle at 20% 0, rgba(11, 94, 215, 0.12), transparent 55%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* Header */
+.pf-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.pf-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: rgba(11, 94, 215, 0.06);
+  color: var(--pf-blue);
+  margin-bottom: 10px;
+}
+
+.pf-title {
+  margin: 0 0 8px;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--pf-dark);
+}
+
+.pf-subtitle {
+  margin: 0 auto;
+  max-width: 640px;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--pf-muted);
+}
+
+/* Steps wrapper */
+.pf-steps-wrapper {
+  position: relative;
+  padding: 34px 10px 0;
+  z-index: 1;
+}
+
+/* dotted gradient line behind circles (desktop) */
+.pf-steps-line {
+  position: absolute;
+  top: 64px;
+  left: 70px;
+  right: 70px;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(148, 163, 184, 0.3) 0,
+    rgba(148, 163, 184, 0.3) 40%,
+    transparent 0
+  );
+  background-size: 16px 2px;
+  background-repeat: repeat-x;
+  z-index: 0;
+}
+
+/* steps container */
+.pf-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  flex-wrap: nowrap;
+}
+
+/* each step */
+.pf-step {
+  flex: 1;
+  min-width: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.pf-step-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.25s ease, filter 0.25s ease;
+  animation: pf-fade-up 0.6s ease forwards;
+}
+
+/* staggered animation */
+.pf-step:nth-child(1) .pf-step-inner {
+  animation-delay: 0.0s;
+}
+.pf-step:nth-child(2) .pf-step-inner {
+  animation-delay: 0.05s;
+}
+.pf-step:nth-child(3) .pf-step-inner {
+  animation-delay: 0.1s;
+}
+.pf-step:nth-child(4) .pf-step-inner {
+  animation-delay: 0.15s;
+}
+.pf-step:nth-child(5) .pf-step-inner {
+  animation-delay: 0.2s;
+}
+
+/* circle wrapper (for potential future connectors) */
+.pf-circle-wrapper {
+  position: relative;
+}
+
+/* circle styling (glass + ring) */
+.pf-circle {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 0, rgba(255, 255, 255, 0.85), rgba(248, 250, 252, 0.9)),
+    linear-gradient(135deg, rgba(11, 94, 215, 0.12), rgba(37, 99, 235, 0.05));
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+/* inner white ring for depth */
+.pf-circle::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+/* Number badge inside circle (top-right chip) */
+.pf-step-number-inside {
+  position: absolute;
+  top: 0px;
+  right: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0b5ed7, #2563eb);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.55);
+  z-index: 2;
+}
+
+/* Icon styling */
+.pf-step-icon {
+  position: relative;
+  z-index: 2;
+  font-size: 1.45rem;
+  color: var(--pf-blue);
+  transition: transform 0.25s ease;
+}
+
+/* Label text */
+.pf-step-label {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--pf-dark);
+  max-width: 160px;
+  font-weight: 600;
+}
+
+.pf-step-desc {
+  font-size: 0.85rem;
+}
+
+/* Hover effects */
+.pf-step:hover .pf-circle {
+  transform: translateY(-6px) scale(1.03);
+  border-color: var(--pf-blue);
+  background:
+    radial-gradient(circle at 30% 0, rgba(219, 234, 254, 0.95), rgba(239, 246, 255, 1)),
+    linear-gradient(135deg, rgba(11, 94, 215, 0.16), rgba(37, 99, 235, 0.12));
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.24);
+}
+
+.pf-step:hover .pf-step-icon {
+  transform: translateY(-1px) scale(1.04);
+}
+
+.pf-step:hover .pf-step-inner {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 12px 20px rgba(15, 23, 42, 0.12));
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .pf-inner {
+    padding: 28px 20px 36px;
+    border-radius: 20px;
+  }
+
+  .pf-steps-wrapper {
+    padding-top: 18px;
+  }
+
+  .pf-steps-line {
+    display: none;
+  }
+
+  .pf-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pf-step {
+    width: 100%;
+    max-width: 460px;
+    justify-content: flex-start;
+  }
+
+  .pf-step-inner {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+  }
+
+  .pf-step-label {
+    max-width: none;
+  }
+}
+
+/* smaller screens */
+@media (max-width: 520px) {
+  .pf-title {
+    font-size: 1.6rem;
+  }
+
+  .pf-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .pf-circle {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* simple fade-up animation */
+@keyframes pf-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

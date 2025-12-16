@@ -1,0 +1,573 @@
+/* :root {
+  --svc-blue: #0b5ed7;
+  --svc-blue-soft: #ecf3ff;
+  --svc-dark: #102438;
+  --svc-muted: #6b7280;
+  --svc-border: #dde4f5;
+}
+
+/* Section wrapper */
+/*.svc-section {
+  background-color: #ffffff;
+  padding: 80px 24px 90px;
+}
+
+.svc-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Header */
+/*.svc-header {
+  max-width: 720px;
+  margin-bottom: 36px;
+}
+
+.svc-eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  color: var(--svc-blue);
+}
+
+.svc-title {
+  margin: 0 0 10px;
+  font-size: 2.1rem;
+  line-height: 1.3;
+  color: var(--svc-dark);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.svc-subtitle {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: var(--svc-muted);
+}
+
+/* === SIMPLE CARD GRID === */
+
+/*.svc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+/* base card */
+/*.svc-card-simple {
+  position: relative;
+  padding: 22px 22px 24px;
+  border-radius: 0px;
+  background: #ffffff;
+  border: 1px solid var(--svc-border);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  transition: transform 0.26s ease, box-shadow 0.26s ease,
+    border-color 0.26s ease, background 0.26s ease;
+}
+
+/* subtle gradient strip on top */
+/*.svc-card-simple::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0b5ed7, #38bdf8);
+  opacity: 0;
+  transition: opacity 0.26s ease;
+}
+
+/* icon wrapper at top */
+/*.svc-card-icon-wrap {
+  margin-bottom: 14px;
+}
+
+.svc-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecf3ff;
+  color: var(--svc-blue);
+  font-size: 1.4rem;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.18);
+  transition: transform 0.26s ease, box-shadow 0.26s ease;
+}
+
+/* small tag */
+/*.svc-card-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  margin-bottom: 8px;
+}
+
+/* text */
+/*.svc-card-title {
+  margin: 6px 0 4px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--svc-dark);
+}
+
+.svc-card-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--svc-muted);
+}
+
+/* hover animation */
+/*.svc-card-simple:hover {
+  transform: translateY(-8px);
+  border-color: rgba(11, 94, 215, 0.75);
+  background: radial-gradient(circle at top left, #f3f7ff, #ffffff 55%);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.18);
+}
+
+.svc-card-simple:hover::before {
+  opacity: 1;
+}
+
+.svc-card-simple:hover .svc-card-icon {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.3);
+}
+
+/* Arrow under subtitle */
+/*.svc-card-arrow {
+  margin-top: 14px;
+  font-size: 1.2rem;
+  color: var(--svc-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.26s ease, opacity 0.26s ease;
+  opacity: 0.7;
+}
+
+/* Hover makes arrow slide slightly right */
+/*.svc-card-simple:hover .svc-card-arrow {
+  transform: translateX(6px);
+  opacity: 1;
+}
+
+
+/* CTA / Button */
+/*.svc-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.svc-view-all-btn {
+  border-radius: 999px;
+  border: 1px solid #0b5ed7;
+  padding: 10px 26px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: #0b5ed7;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.22s ease, color 0.22s ease,
+    box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.svc-view-all-btn:hover {
+  background: #0844a3;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
+}
+
+.svc-view-all-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive */
+/*@media (max-width: 900px) {
+  .svc-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .svc-section {
+    padding: 60px 18px 70px;
+  }
+
+  .svc-title {
+    font-size: 1.85rem;
+  }
+
+  .svc-card-grid {
+    grid-template-columns: 1fr;
+  }
+} */
+
+
+:root {
+  --svc-blue: #0b5ed7;
+  --svc-blue-soft: #ecf3ff;
+  --svc-dark: #102438;
+  --svc-muted: #6b7280;
+  --svc-border: #dde4f5;
+}
+
+/* Section wrapper */
+.svc-section {
+  background-color: #ffffff;
+  padding: 0px 24px 90px;
+}
+
+.svc-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Header */
+.svc-header {
+  max-width: 720px;
+  margin-bottom: 36px;
+}
+
+.svc-eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  color: var(--svc-blue);
+}
+
+.svc-title {
+  margin: 0 0 10px;
+  font-size: 2.1rem;
+  line-height: 1.3;
+  color: var(--svc-dark);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.svc-subtitle {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: var(--svc-muted);
+}
+
+/* === SIMPLE CARD GRID (kept for fallback if you reuse grid) === */
+
+.svc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+/* base card */
+.svc-card-simple {
+  position: relative;
+  padding: 22px 22px 24px;
+  border-radius: 0px;
+  background: #ffffff;
+  border: 1px solid var(--svc-border);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+  transition: transform 0.26s ease, box-shadow 0.26s ease,
+    border-color 0.26s ease, background 0.26s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* subtle gradient strip on top */
+.svc-card-simple::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0b5ed7, #38bdf8);
+  opacity: 0;
+  transition: opacity 0.26s ease;
+}
+
+/* icon wrapper at top */
+.svc-card-icon-wrap {
+  margin-bottom: 14px;
+}
+
+.svc-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecf3ff;
+  color: var(--svc-blue);
+  font-size: 1.4rem;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.18);
+  transition: transform 0.26s ease, box-shadow 0.26s ease;
+}
+
+/* small tag */
+.svc-card-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+
+/* text */
+.svc-card-title {
+  margin: 6px 0 4px;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--svc-dark);
+}
+
+.svc-card-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--svc-muted);
+  flex: 0 0 auto;
+}
+
+/* hover animation */
+.svc-card-simple:hover {
+ 
+  border-color: rgba(11, 94, 215, 0.75);
+  background: radial-gradient(circle at top left, #f3f7ff, #ffffff 55%);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.18);
+}
+
+.svc-card-simple:hover::before {
+  opacity: 1;
+}
+
+.svc-card-simple:hover .svc-card-icon {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.3);
+}
+
+/* Arrow under subtitle */
+.svc-card-arrow {
+  margin-top: 14px;
+  font-size: 1.2rem;
+  color: var(--svc-blue);
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  transition: transform 0.26s ease, opacity 0.26s ease;
+  opacity: 0.7;
+}
+
+/* Hover makes arrow slide slightly right */
+.svc-card-simple:hover .svc-card-arrow {
+  transform: translateX(6px);
+  opacity: 1;
+}
+
+/* CTA / Button */
+.svc-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.svc-view-all-btn {
+  border-radius: 999px;
+  border: 1px solid #0b5ed7;
+  padding: 10px 26px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: #0b5ed7;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.22s ease, color 0.22s ease,
+    box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.svc-view-all-btn:hover {
+  background: #0844a3;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
+}
+
+.svc-view-all-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .svc-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .svc-section {
+    padding: 60px 18px 70px;
+  }
+
+  .svc-title {
+    font-size: 1.85rem;
+  }
+
+  .svc-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Swiper-specific & nav button tweaks === */
+.svc-carousel-wrap {
+  position: relative;
+  padding: 6px 0 28px; /* give space for pagination */
+  margin-top: 32px;
+}
+
+/* position custom nav buttons */
+.svc-swiper-button-prev,
+.svc-swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: #b8daf3;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--svc-dark);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+
+/* Arrow hover */
+.svc-swiper-button-prev:hover,
+.svc-swiper-button-next:hover {
+  transform: translateY(-50%) scale(1.03);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+.svc-swiper-button-prev { left: -50px; }
+.svc-swiper-button-next { right: -50px; }
+
+/* hide default Swiper navigation if present */
+.swiper-button-next,
+.swiper-button-prev { display: none; }
+
+/* pagination bullets styling (bottom center) */
+.swiper-pagination {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 20;
+}
+
+/* style bullets */
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: var(--svc-border);
+  opacity: 1;
+  border-radius: 10px;
+  transition: transform .18s ease, background .18s ease;
+}
+.swiper-pagination-bullet-active {
+  background: var(--svc-blue);
+  transform: scale(1.35);
+}
+
+/* adapt card width inside slides */
+.swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: stretch; /* keep cards same height */
+}
+
+.swiper-slide .svc-card-simple {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* responsive nav button placement on small screens */
+@media (max-width: 600px) {
+  .svc-swiper-button-prev { left: 4px; }
+  .svc-swiper-button-next { right: 4px; }
+  .svc-swiper-button-prev,
+  .svc-swiper-button-next { width: 36px; height: 36px; font-size: 1rem; }
+}
+
+/* Accessibility & focus states for nav buttons */
+.svc-swiper-button-prev:focus,
+.svc-swiper-button-next:focus {
+  outline: 3px solid rgba(11,94,215,0.15);
+  outline-offset: 2px;
+}
+
+/* Small polish: make card content consistent height and spacing */
+.svc-card-simple .svc-card-icon-wrap { flex: 0 0 auto; }
+.svc-card-simple .svc-card-tag { flex: 0 0 auto; }
+.svc-card-simple .svc-card-title { flex: 0 0 auto; }
+.svc-card-simple .svc-card-text { flex: 1 1 auto; margin-bottom: 10px; }
+
+/* Optional: reduce swiper touch highlight on mobile */
+.swiper-slide { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+
+/* === Add spacing between carousel cards === */
+.slick-slide {
+  padding: 0 12px;   /* Horizontal space between cards */
+  box-sizing: border-box;
+}
+
+.slick-list {
+  margin: 0 -12px;   /* Ensures outer slides align correctly */
+}

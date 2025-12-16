@@ -1,0 +1,89 @@
+/* components/FloatingConsultButton.css */
+
+/* vertical floating button on the left middle */
+.vertical-consult-btn {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* rotated vertical label */
+.vertical-btn {
+  writing-mode: vertical-rl;   /* vertical text */
+  transform: rotate(180deg);   /* readable top-to-bottom */
+  background: #175887;
+  color: #fff;
+  padding: 44px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 0px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+/* hover */
+.vertical-btn:hover {
+  background: #175887;
+  transform: rotate(180deg) translateY(-2px);
+}
+
+/* simple drawer styles */
+.ux-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.45);
+  z-index: 9998;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+}
+
+.ux-drawer {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 12px 12px 6px 6px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(2,6,23,0.3);
+  position: relative;
+}
+
+.ux-drawer-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ux-drawer-content h3 { margin: 0 0 6px 0; font-size: 18px; }
+.ux-drawer-action {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #04203a;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+
+
+
+
+.hidden-btn {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+

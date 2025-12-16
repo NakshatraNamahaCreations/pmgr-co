@@ -1,0 +1,182 @@
+/* Row layout */
+.about-firm{
+    margin-top: 100px;
+}
+
+.about-firm__intro-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left side text */
+.about-firm__intro-left {
+  max-width: 70%;
+}
+
+.about-firm__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.about-firm__text {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* Button on the right */
+.about-firm__intro-right {
+  display: flex;
+  align-items: center;
+}
+
+.about-firm__btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  letter-spacing: 0.04em;
+}
+
+.about-firm__btn:hover {
+  background: #1749b3;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-firm__intro-left {
+    max-width: 100%;
+  }
+
+  .about-firm__intro-right {
+    margin-top: 18px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+
+.about-firm {
+  background: #ffffff;
+  padding: 80px 20px;
+}
+
+.about-firm__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-firm__intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-firm__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+.about-firm__text {
+  font-size: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* Stats grid */
+.about-firm__grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Card design */
+.about-card {
+  position: relative;
+  background: #f5f7ff;
+  border-radius: 12px;
+  padding: 24px 20px 20px 20px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.about-card:hover{
+    transform: translateY(-5px);
+}
+
+/* Blue accent strip on left */
+.about-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #2563eb;
+}
+
+/* Number badge */
+.about-card__badge {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2563eb;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.about-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.about-card__subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-firm__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .about-firm {
+    padding: 60px 16px;
+  }
+
+  .about-firm__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-firm__title {
+    font-size: 26px;
+  }
+}

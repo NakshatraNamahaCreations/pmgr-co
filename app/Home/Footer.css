@@ -1,0 +1,269 @@
+:root {
+  --ux-dark: #0f172a;
+  --ux-light: #f8fafc;
+  --ux-muted: #cbd5e1;
+  --ux-accent: #2563eb;
+  --ux-border: rgba(255, 255, 255, 0.07);
+  --ux-card-bg: rgba(255, 255, 255, 0.08);
+}
+
+/* Entire footer */
+.ux-footer {
+  background: var(--ux-dark);
+  color: var(--ux-light);
+  margin-top: 80px;
+  position: relative;
+}
+
+/* ---------------------------------------
+   Highlight Contact Bar
+--------------------------------------- */
+.ux-footer-highlight {
+  background: linear-gradient(90deg, #1e293b, #0f172a);
+  padding: 18px 0;
+  border-bottom: 1px solid var(--ux-border);
+}
+
+.ux-h-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ux-h-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.9;
+  font-size: 0.92rem;
+}
+
+.ux-h-item svg {
+  color: var(--ux-accent);
+}
+
+/* ---------------------------------------
+   Main Footer
+--------------------------------------- */
+.ux-footer-main {
+  padding: 80px 0 40px;
+  position: relative;
+}
+
+/* Floating Badge */
+.ux-footer-badge {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1d4ed8;
+  padding: 14px 34px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ux-light);
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* Grid Layout */
+.ux-footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+/* Columns */
+.ux-footer-col h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.ux-footer-col p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--ux-muted);
+  margin-bottom: 20px;
+}
+
+.ux-footer-col h4 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--ux-accent);
+  width: 120px;
+}
+
+
+
+
+.ux-footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ux-footer-col ul li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--ux-muted);
+}
+
+.ux-footer-col ul li a {
+  text-decoration: none;
+  color: var(--ux-muted);
+  transition: color 0.2s ease;
+}
+
+.ux-footer-col ul li a:hover {
+  color: var(--ux-accent);
+}
+
+/* ---------------------------------------
+   Social Icons
+--------------------------------------- */
+.ux-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.ux-socials a {
+  width: 36px;
+  height: 36px;
+  background: var(--ux-card-bg);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ux-light);
+  transition: 0.2s ease;
+}
+
+.ux-socials a:hover {
+  background: var(--ux-accent);
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------
+   Email Form
+--------------------------------------- */
+.ux-footer-form {
+  display: flex;
+  gap: 10px;
+}
+
+.ux-footer-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--ux-border);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--ux-light);
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.ux-footer-form input::placeholder {
+  color: var(--ux-muted);
+}
+
+.ux-footer-form button {
+  border: none;
+  padding: 10px 18px;
+  background: #2563eb;
+  color: var(--ux-light);
+  font-size: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ux-footer-form button:hover {
+  background: #1e40af;
+}
+
+/* ---------------------------------------
+   Bottom Bar
+--------------------------------------- */
+.ux-footer-bottom {
+  border-top: 1px solid var(--ux-border);
+  padding: 16px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ux-muted);
+}
+
+/* Make sure footer is relative so sidebar can sit on its side */
+.ux-footer {
+  position: relative;
+}
+
+
+/* Sidebar container */
+.ux-footer-sidebar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  z-index: 10;
+}
+
+/* Sidebar rotated tab */
+.ux-footer-sidebar-inner {
+  background: #175887;
+  padding: 12px 28px;
+  border-radius: 50px 50px 0 0;
+  color: #fff;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.4);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ux-footer-sidebar-inner:hover {
+  background: #175887;
+  color: #fff;
+  
+}
+
+.ux-footer-sidebar-btn{
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+
+/* Hide sidebar on small screens */
+@media (max-width: 768px) {
+  .ux-footer-sidebar {
+    display: none;
+  }
+}
+
+
+/* ---------------------------------------
+   Responsive
+--------------------------------------- */
+@media (max-width: 960px) {
+  .ux-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .ux-footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .ux-footer-badge {
+    font-size: 0.85rem;
+    padding: 12px 24px;
+  }
+}

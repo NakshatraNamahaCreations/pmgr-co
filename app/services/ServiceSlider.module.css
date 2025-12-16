@@ -1,0 +1,261 @@
+/* /* =========================
+   GLOBAL SAFETY
+========================= */
+body {
+  overflow-x: hidden;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.wrapper {
+ 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 16px;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* =========================
+   SCROLLSPY NAV
+========================= */
+.spyNav {
+  position: relative;
+  top: 0px;
+  max-width: 1280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: auto;
+}
+
+.spyItem {
+  background: #f5f8fc;
+  border: 1px solid #e4ebf5;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.25s ease;
+  color: #1f2937;
+}
+
+.spyItem:hover {
+  background: #eef4ff;
+  color: #175885;
+}
+
+.active {
+  background: #175885;
+  color: #fff;
+  border-color: #175885;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.content {
+  flex: 1;
+  max-width: 1280px;
+  min-width: 0;
+  margin-top: 150px;
+}
+
+/* =========================
+   SERVICE SECTION
+========================= */
+.serviceSection {
+  padding-bottom: 72px;
+  border:none;
+}
+
+.serviceSection:last-child {
+  border-bottom: none;
+}
+
+/* HEADING INLINE ICON */
+.sectionHeading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.headingIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #eef4ff;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.sectionDesc {
+  max-width: 720px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.para{
+  color: #175885;
+  font-weight: 600;
+}
+
+/* =========================
+   SUB SLIDER
+========================= */
+.subSliderWrap {
+  margin-top: 32px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   REACT-SLICK FIXES
+========================= */
+.slick-slider,
+.slick-list {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+}
+
+.slick-track {
+  display: flex !important;
+  width: auto !important;
+}
+
+.slick-slide {
+  float: none !important;
+  height: auto !important;
+}
+
+.bookbtn{
+  background-color: #175885;
+  color: #fff;
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  border: none;
+  padding: 10px 15px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .spyNav {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .spyItem {
+    white-space: nowrap;
+  }
+} 
+
+
+.wrapper {
+  width: 100%;
+}
+
+/* TOP TABS */
+.tabs {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: none;
+  background: #f3f4f6;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.tab:hover {
+  background: #e5e7eb;
+}
+
+.active {
+  background: #0b5ed7;
+  color: #fff;
+}
+
+/* CONTENT */
+.content {
+  margin-top: 28px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.para {
+  margin-top: 28px;
+  font-size: 16px;
+  color: #444;
+}
+
+.bookbtn {
+  margin-top: 14px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: #0b5ed7;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MOBILE TWEAK */
+@media (max-width: 768px) {
+  .content {
+    padding: 22px;
+  }
+}
