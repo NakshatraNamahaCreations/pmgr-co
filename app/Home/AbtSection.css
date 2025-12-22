@@ -64,15 +64,39 @@ html, body{
 }
 
 .solutions-title {
-  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  margin: 0 auto;
   font-size: 2.4rem;
   line-height: 1.25;
   color: var(--dark-text);
   font-weight: 600;
   letter-spacing: 0.5px;
-  margin-left: 40px;
   text-align: center;
 }
+
+/* Decorative lines */
+.border-line {
+  width: 50px;
+  height: 2px;
+  background-color: #175887;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .solutions-title {
+    font-size: 1.9rem;
+    gap: 12px;
+  }
+
+  .border-line {
+    width: 32px;
+  }
+}
+
 
 /* .solutions-title::before{
    content: "";

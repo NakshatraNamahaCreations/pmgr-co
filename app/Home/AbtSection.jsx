@@ -16,7 +16,9 @@ const AbtSection = () => {
           <div className="solutions-left" data-aos="fade-up">
             {/* <p className="solutions-eyebrow">About PMRG & Co</p> */}
             <h2 className="solutions-title">
+               <span className="border-line"></span>
              Numbers behind the growth story
+              <span className="border-line"></span>
             </h2>
           </div>
 
