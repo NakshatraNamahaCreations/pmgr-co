@@ -230,7 +230,7 @@ export default function TeamList() {
             <img src="/images/Pramoth1.jpg" alt="Pramoth P" />
             <div className="meta">
               <span>DOJ: Nov 2022</span>
-              <span>Pazhani, Tamil Nadu</span>
+              <span>Palani, Tamil Nadu</span>
                <span className="iconWrap">
   <FaLinkedin />
   <FaPhoneAlt />
@@ -404,7 +404,7 @@ export default function TeamList() {
 
           <div className="editorial-content">
             <h3>Gowrinitharshna C</h3>
-            <p className="designation">Associate Chartered Accountant</p>
+            <p className="designation">Associate Chartered Accountant, Bachelor of Commerce</p>
 
             <p>
               Gowri has experience across risk-focused audits, compliance

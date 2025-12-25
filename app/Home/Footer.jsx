@@ -89,7 +89,7 @@ const Footer = () => {
               <li>Coimbatore</li>
               <li>Salem</li>
               <li>Tiruppur</li>
-              <li>Pazhani</li>
+              <li>Palani</li>
             </ul>
           </div>
         </div>

@@ -183,7 +183,16 @@ export default function ContactPage() {
             </div>
             <h3>Head Office: </h3>
             <p>Coimbatore<br/>Address: 373/3, Mettupalayam Road, Near FACT, Coimbatore North, Coimbatore - 641043</p>
-            <p>[View on Google maps]</p>
+          <p className="mapLink">
+  <a
+    href="https://www.google.com/maps?q=Tiruppur,+Tamil+Nadu"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+   [View on Google Maps]
+  </a>
+</p>
+
            
           </article>
 
@@ -221,7 +230,7 @@ export default function ContactPage() {
       mapLink: "https://maps.google.com/?q=7/1,+Chinnakka+Rangasamy+Thevar+Street,+Sulur,+Coimbatore+641402"
     },
     {
-      city: "Pazhani",
+      city: "Palani",
       icon: <FaMapLocation />,
       address: "2/249, Midapadi, M.N. Patti Post, Palani – 624618",
       phone: "+91 88386 67049",
