@@ -232,9 +232,10 @@ export default function TeamList() {
               <span>DOJ: Nov 2022</span>
               <span>Palani, Tamil Nadu</span>
                <span className="iconWrap">
-  <FaLinkedin />
-  <FaPhoneAlt />
-  <FaEnvelope />
+                <a href="https://www.linkedin.com/in/pramoth-p-9349851a3/">  <FaLinkedin size={20} color="#fff"/></a>
+<a href="tel:+91 8838667049"> <FaPhoneAlt size={15} color="#fff"/></a>
+ 
+  <FaEnvelope size={18} color="#fff"/>
 </span>
             </div>
           </aside>
@@ -273,9 +274,9 @@ export default function TeamList() {
               <span>DOJ: Nov 2022</span>
               <span>Coimbatore, Tamil Nadu</span>
                <span className="iconWrap">
-  <FaLinkedin />
-  <FaPhoneAlt />
-  <FaEnvelope />
+                <a href="https://www.linkedin.com/in/mithuna-d-v-61a842178/"> <FaLinkedin size={16} color="#fff"/></a>
+<a href="tel:+91 9344733377"> <FaPhoneAlt size={14} color="#fff"/></a>
+  <FaEnvelope size={16} color="#fff"/>
 </span>
             </div>
           </aside>
@@ -312,9 +313,10 @@ export default function TeamList() {
               <span>DOJ: Nov 2022</span>
               <span>Salem, Tamil Nadu</span>
                <span className="iconWrap">
-  <FaLinkedin />
-  <FaPhoneAlt />
-  <FaEnvelope />
+                <a href="https://www.linkedin.com/in/gowshikha-thangaraju-583254196/"><FaLinkedin size={20} color="#fff"/></a>
+  <a href="tel:+91 7339049957"><FaPhoneAlt size={16} color="#fff"/></a>
+  
+  <FaEnvelope size={18} color="#fff"/>
 </span>
             </div>
           </aside>
@@ -352,9 +354,10 @@ export default function TeamList() {
               <span>DOJ: Nov 2022</span>
                  <span>Sulur (Coimbatore)</span>
               <span className="iconWrap">
-  <FaLinkedin />
-  <FaPhoneAlt />
-  <FaEnvelope />
+                <a href="https://www.linkedin.com/in/ca-r-m-rahul-460106108/"><FaLinkedin size={20} color="#fff"/></a>
+  <a href="tel:+91 9791235452"> <FaPhoneAlt size={16} color="#fff"/></a>
+ 
+  <FaEnvelope size={18} color="#fff"/>
 </span>
 
            
@@ -395,9 +398,10 @@ export default function TeamList() {
               <span>DOJ: Jan 2026</span>
               <span>Tiruppur, Tamil Nadu</span>
                <span className="iconWrap">
-  <FaLinkedin />
-  <FaPhoneAlt />
-  <FaEnvelope />
+                <a href="https://www.linkedin.com/in/gowri-nitharshna/"> <FaLinkedin size={20} color="#fff"/></a>
+ <a href="tel:+91 9943966077">  <FaPhoneAlt size={16} color="#fff"/></a>
+
+  <FaEnvelope size={18} color="#fff"/>
 </span>
             </div>
           </aside>
@@ -435,9 +439,10 @@ export default function TeamList() {
               <span>DOJ: Jan 2026</span>
               <span>Coimbatore, Tamil Nadu</span>
                <span className="iconWrap">
-  <FaLinkedin />
-  <FaPhoneAlt />
-  <FaEnvelope />
+                <a href="https://www.linkedin.com/in/sri-vaibhav/"><FaLinkedin size={16} color="#fff"/></a>
+  <a href="tel:+91 9344733377"> <FaPhoneAlt size={14} color="#fff"/></a>
+ 
+  <FaEnvelope size={16} color="#fff"/>
 </span>
             </div>
           </aside>
@@ -458,7 +463,7 @@ export default function TeamList() {
             <ul>
               <li>Controllership & financial close</li>
               <li>SOX compliance & internal control frameworks</li>
-              <li>Interna l, process & management audits</li>
+              <li>Internal, process & management audits</li>
               <li>Process optimization & continuous improvement</li>
               <li>Financial automation & workflow enhancement</li>
             </ul>

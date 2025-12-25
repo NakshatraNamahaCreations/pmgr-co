@@ -184,13 +184,19 @@ export default function ContactPage() {
             <h3>Head Office: </h3>
             <p>Coimbatore<br/>Address: 373/3, Mettupalayam Road, Near FACT, Coimbatore North, Coimbatore - 641043</p>
           <p className="mapLink">
+  <div className="mapSection">
+  {/* GOOGLE MAP LINK */}
   <a
-    href="https://www.google.com/maps?q=Tiruppur,+Tamil+Nadu"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-   [View on Google Maps]
-  </a>
+  href="https://www.google.com/maps?q=11.019733989144209,76.95125207486058"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mapLink"
+>
+  [View on Google Maps]
+</a>
+
+</div>
+
 </p>
 
            
@@ -227,7 +233,7 @@ export default function ContactPage() {
         "7/1, Chinnakka Rangasamy Thevar Street, Sulur, Coimbatore – 641402",
       phones: ["+91 97912 35452", "+91 80723 92668"],
       email: "partner3@email.com",
-      mapLink: "https://maps.google.com/?q=7/1,+Chinnakka+Rangasamy+Thevar+Street,+Sulur,+Coimbatore+641402"
+      mapLink: "https://maps.google.com/?q=11.025943,77.124023"
     },
     {
       city: "Palani",
@@ -235,7 +241,7 @@ export default function ContactPage() {
       address: "2/249, Midapadi, M.N. Patti Post, Palani – 624618",
       phone: "+91 88386 67049",
       email: "partner4@email.com",
-      mapLink: "https://maps.google.com/?q=2/249,+Midapadi,+Palani+624618"
+      mapLink: "https://maps.google.com/?q=10.585130,77.402440"
     },
     {
       city: "Salem",
@@ -244,7 +250,7 @@ export default function ContactPage() {
         "40/16E, Sankar Nagar, Old Eye Care Hospital Road – 636007",
       phone: "+91 73390 49957",
       email: "partner5@email.com",
-      mapLink: "https://maps.google.com/?q=40/16E,+Sankar+Nagar,+Salem+636007"
+      mapLink: "https://maps.google.com/?q=11.6651300,78.1526790"
     },
     {
       city: "Tiruppur",
@@ -252,7 +258,7 @@ export default function ContactPage() {
       address: "4/41, CK's Aishwaryam, Palladam Road – 641605",
       phone: "+91 99439 66077",
       email: "partner6@email.com",
-      mapLink: "https://maps.google.com/?q=4/41,+CK's+Aishwaryam,+Palladam+Road,+Tiruppur+641605"
+      mapLink: "https://maps.google.com/?q=11.0789970,77.3418750"
     }
   ].map((loc, i) => (
     <article key={i} className="solutions-card">
