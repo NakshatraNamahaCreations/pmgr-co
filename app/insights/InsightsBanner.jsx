@@ -9,7 +9,7 @@ export default function InsightsBanner() {
       <div className="services-hero-content">
      
 
-        <h1 className="services-title">Our Blog</h1>
+        <h1 className="services-title">Our Blogs</h1>
 
         {/* <p className="services-description">
           We offer a unified suite of audit, tax, compliance, and financial advisory services designed to support businesses at every stage. Our approach brings structure, clarity, and disciplined execution to your statutory and financial requirements.

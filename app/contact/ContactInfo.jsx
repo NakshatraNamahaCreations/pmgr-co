@@ -182,7 +182,7 @@ export default function ContactPage() {
             <div className="sol-icon">
               <FaBuilding className="sol-react-icon" />
             </div>
-            <h3>Address: </h3>
+            <h3>Address </h3>
             <p>Coimbatore<br/>Address: 373/3, Mettupalayam Road, Near FACT, Coimbatore North, Coimbatore - 641043</p>
           <p className="mapLink">
   <div className="mapSection">

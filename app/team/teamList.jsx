@@ -70,7 +70,7 @@ export default function TeamList() {
              Pramoth works with organisations across geographies to enhance financial systems, improve governance, and modernise accounting operations. With experience spanning valuation, cross-border bookkeeping, and financial system automation, he helps clients build scalable processes and strengthen financial visibility. His work emphasises structured workflows, technology-enabled efficiency, and disciplined financial reporting.
             </p>
 
-             <h3 className="focus-heading">Area of Focus</h3>
+             <h3 className="focus-heading">Areas of Focus</h3>
              <ul className="bio-list">
                <li>International bookkeeping (Singapore, Malaysia & Middle East)</li>             
                 <li>Business valuation for transactions & strategic decisions</li>
@@ -133,7 +133,7 @@ export default function TeamList() {
               Mithuna supports businesses with structured tax compliance, financial planning, and documentation-driven processes. She works closely with organisations to build clarity in their filings, strengthen their planning routines, and establish reliable financial workflows that improve day-to-day decision-making. Her approach is grounded, organised, and focused on giving businesses the confidence of well-managed statutory responsibilities.
             </p>
 
-            <h3 className="focus-heading">Area of Focus</h3>
+            <h3 className="focus-heading">Areas of Focus</h3>
              <ul className="bio-list">
                <li>Income Tax and GST compliance execution</li>             
                 <li>Projected financial statements and business planning</li>
@@ -194,7 +194,7 @@ export default function TeamList() {
              Gowshika brings four years of experience in audit, taxation, compliance, and specialised documentation work. She delivers structured, detail-oriented support for statutory requirements, fund-raising documentation, and forensic assignments. Her approach blends strong technical grounding with thorough documentation practices, supporting businesses through both routine and specialised compliance needs.
 
             </p>
-             <h3 className="focus-heading">Area of Focus</h3>
+             <h3 className="focus-heading">Areas of Focus</h3>
              <ul className="bio-list">
                <li>Statutory, tax & bank audits</li>             
                 <li>Transfer pricing compliance</li>
@@ -256,7 +256,7 @@ export default function TeamList() {
             <p>
              Rahul specialises in litigation support, forensic reviews, PSU audits, and risk-focused assignments. With experience across direct and indirect tax representations, High Court drafting support, and UAE financial reporting, he brings a practical, investigation-ready perspective to complex engagements. His work emphasises clarity, documentation strength, and structured problem-solving across regulatory environments.
             </p>
-             <h3 className="focus-heading">Area of Focus</h3>
+             <h3 className="focus-heading">Areas of Focus</h3>
              <ul className="bio-list">
                <li>Forensic audits & fraud risk reviews</li>             
                 <li>GST appeals, litigation support & drafting</li>
@@ -318,7 +318,7 @@ export default function TeamList() {
             <p>
              Gowri has experience across risk-focused audits, compliance frameworks, and financial planning assignments, strengthened by her Big Four background. She works with individuals, start-ups, and corporates to evaluate systems, assess risks, and design structured processes that support sustainable growth. Her work combines clarity, discipline, and an emphasis on informed decision-making.
             </p>
-            <h3 className="focus-heading">Area of Focus</h3>
+            <h3 className="focus-heading">Areas of Focus</h3>
              <ul className="bio-list">
                <li>Risk-based audits & systems evaluations</li>             
                 <li>Compliance framework design for growing businesses</li>
@@ -377,7 +377,7 @@ export default function TeamList() {
             <p>
             Vaibhav works with organisations to strengthen governance, internal controls, and financial operations. With experience in multinational and Fortune 500 environments, he brings a structured, systems-driven perspective to controllership, SOX compliance, and process excellence. His work focuses on building reliable financial frameworks, enhancing leadership visibility, and enabling organisations to scale with discipline.
             </p>
-            <h3 className="focus-heading">Area of Focus</h3>
+            <h3 className="focus-heading">Areas of Focus</h3>
              <ul className="bio-list">
                <li>Controllership, financial close & policy standardisation</li>             
                 <li>SOX compliance & internal control framework design</li>
