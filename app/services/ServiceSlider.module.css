@@ -1,226 +1,30 @@
-/* /* =========================
-   GLOBAL SAFETY
-========================= */
-body {
-  overflow-x: visible;
-}
-
 /* =========================
-   MAIN LAYOUT
+   WRAPPER
 ========================= */
 .wrapper {
- 
   max-width: 1300px;
   margin: 0 auto;
   padding: 80px 16px;
-  gap: 48px;
-  align-items: flex-start;
 }
 
 /* =========================
-   SCROLLSPY NAV
+   STICKY TABS
 ========================= */
-.spyNav {
-  position: relative;
-  top: 0px;
-  max-width: 1280px;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin: auto;
-}
-
-.spyItem {
-  background: #f5f8fc;
-  border: 1px solid #e4ebf5;
-  padding: 14px 16px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 500;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.25s ease;
-  color: #1f2937;
-}
-
-.spyItem:hover {
-  background: #eef4ff;
-  color: #175885;
-}
-
-.active {
-  background: #175885;
-  color: #fff;
-  border-color: #175885;
-}
-
-/* =========================
-   CONTENT
-========================= */
-.content {
-  flex: 1;
-  max-width: 1280px;
-  min-width: 0;
-  margin-top: 150px;
-}
-
-
-
-/* =========================
-   SERVICE SECTION
-========================= */
-.serviceSection {
-  padding-bottom: 72px;
-  border:none;
-}
-
-.serviceSection:last-child {
-  border-bottom: none;
-}
-
-/* HEADING INLINE ICON */
-.sectionHeading {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 28px;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 12px;
-}
-
-.heading{
-  color: #175885;
-  font-weight: 700;
-}
-
-.headingIcon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: #eef4ff;
-  color: #1d4ed8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-
-.sectionDesc {
-  max-width: 720px;
-  margin-bottom: 24px;
-  font-size: 16px;
-  color: #475569;
-  line-height: 1.7;
-}
-
-.para{
-  color: #175885;
-  font-weight: 600;
-}
-
-/* =========================
-   SUB SLIDER
-========================= */
-.subSliderWrap {
-  margin-top: 32px;
-  width: 100%;
-  overflow: hidden;
-}
-
-/* =========================
-   REACT-SLICK FIXES
-========================= */
-.slick-slider,
-.slick-list {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow: hidden !important;
-}
-
-.slick-track {
-  display: flex !important;
-  width: auto !important;
-}
-
-.slick-slide {
-  float: none !important;
-  height: auto !important;
-}
-
-.bookbtn{
-  background-color: #175885;
-  color: #fff;
-  font-family: var(--font-times), sans-serif;
-  font-weight: 600;
-  border: none;
-  padding: 10px 15px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 900px) {
-  .wrapper {
-    flex-direction: column;
-    gap: 32px;
-  }
-
-  .spyNav {
-    position: relative;
-    width: 100%;
-    flex-direction: row;
-    overflow-x: auto;
-  }
-
-  .content {
-    max-width: 100%;
-  }
-
-  .spyItem {
-    white-space: nowrap;
-  }
-} 
-
-
-.wrapper {
-  width: 100%;
-}
-
-/* TOP TABS */
-.serviceSection {
-  scroll-margin-top: 270px; /* offset for fixed header */
-  margin-bottom: 40px;
-}
-
-
 .tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-
   position: sticky;
-  top: 70px;               /* height of your fixed header */
+  top: 70px;
   z-index: 50;
-
-  background: #ffffff;    /* prevents content bleed-through */
+  background: #fff;
   padding: 16px 0;
-}
-
-
-.tab {
-  flex: 0 0 calc(20% - 15px); /* 5 per row */
-}
-
-.label{
-  font-size: 15px;
 }
 
 /* TAB */
 .tab {
+  flex: 0 0 calc(20% - 15px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,8 +35,6 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.25s ease;
-  text-align: center;
-  white-space: normal; /* allow wrap */
   color: #fff;
 }
 
@@ -242,51 +44,73 @@ body {
   border: 1px solid #175885;
 }
 
-.active {
+/* ACTIVE TAB */
+.tabActive {
   background: #ecf7ff;
-  opacity: 1;
+  color: #175885;
   box-shadow: 0 8px 22px rgba(23, 88, 133, 0.35);
   transform: translateY(-2px);
-  color: #175885;
 }
 
-
-.icon{
-  size: 20px;
+.label{
+  font-size: 15px;
 }
 
+/* =========================
+   CONTENT
+========================= */
+.content {
+  max-width: 1280px;
+  margin: 150px auto 0;
+}
 
+/* =========================
+   SERVICE SECTION
+========================= */
+.serviceSection {
+  scroll-margin-top: 250px;
+  padding-bottom: 72px;
+}
+
+/* HEADING */
 .heading {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 26px;
+  font-weight: 700;
+  color: #175885;
   margin-bottom: 20px;
 }
+
+
 
 .para {
   margin-top: 28px;
   font-size: 16px;
-  color: #444;
+  font-weight: 600;
+  color: #175885;
 }
 
-
-
-/* MOBILE TWEAK */
-@media (max-width: 768px) {
-  .content {
-    padding: 22px;
-  }
+/* BUTTON */
+.bookbtn {
+  margin-top: 16px;
+  background: #175885;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 900px) {
   .tabs {
-    display: flex;
     overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 8px;
-
-    scrollbar-width: none; /* Firefox */
+    flex-wrap: nowrap;
+    scrollbar-width: none;
   }
 
   .tabs::-webkit-scrollbar {

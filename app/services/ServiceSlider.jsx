@@ -185,51 +185,56 @@ const serviceDataMap = {
 
 export default function ServiceSlider() {
   const [open, setOpen] = useState(false);
-const [activeTab, setActiveTab] = useState(null);
-
-
+  const [activeTab, setActiveTab] = useState("direct-tax");
   const sectionRefs = useRef({});
 
-  // 👉 Scroll to section on tab click
+  /* ---------- TAB CLICK ---------- */
   const handleTabClick = (id) => {
+    setActiveTab(id);
     sectionRefs.current[id]?.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
   };
 
-  // 👉 Scroll spy logic
- useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveTab(entry.target.dataset.id);
+  /* ---------- SCROLL SPY (CORRECT) ---------- */
+  useEffect(() => {
+    const OFFSET = 270; // MUST MATCH scroll-margin-top
+
+    const handleScroll = () => {
+      let current = null;
+
+      for (const [id, section] of Object.entries(sectionRefs.current)) {
+        if (!section) continue;
+
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= OFFSET && rect.bottom > OFFSET) {
+          current = id;
+          break; // 🔥 first valid section wins
         }
-      });
-    },
-    {
-      rootMargin: "-120px 0px -60% 0px",
-      threshold: 0.1,
-    }
-  );
+      }
 
-  Object.values(sectionRefs.current).forEach((section) => {
-    if (section) observer.observe(section);
-  });
+      if (current) {
+        setActiveTab((prev) => (prev !== current ? current : prev));
+      }
+    };
 
-  return () => observer.disconnect();
-}, []);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section className={styles.wrapper}>
-      {/* STICKY TABS */}
+      {/* ---------- STICKY TABS ---------- */}
       <div className={styles.tabs}>
         {services.map((s) => (
           <button
             key={s.id}
             className={`${styles.tab} ${
-              activeTab === s.id ? styles.active : ""
+              activeTab === s.id ? styles.tabActive : ""
             }`}
             onClick={() => handleTabClick(s.id)}
           >
@@ -239,13 +244,12 @@ const [activeTab, setActiveTab] = useState(null);
         ))}
       </div>
 
-      {/* ALL SERVICE SECTIONS */}
+      {/* ---------- CONTENT ---------- */}
       <div className={styles.content}>
         {services.map((s) => (
           <section
             key={s.id}
             ref={(el) => (sectionRefs.current[s.id] = el)}
-            data-id={s.id}
             className={styles.serviceSection}
           >
             <h2 className={styles.heading}>
