@@ -383,7 +383,7 @@ export default function TeamList() {
                 <li>SOX compliance & internal control framework design</li>
               <li>Internal, process & management audits</li>
               <li>Investigations & root-cause reviews</li>
-              <li>Experience across textiles, robotics, oil & energy, healthcare, technology, professionals & NGOsProcess optimisation & continuous improvement</li>
+              <li>Process optimization & continuous improvement</li>
               <li>Financial automation & workflow enhancement</li>
             </ul>
           </div>
